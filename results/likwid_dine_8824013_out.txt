@@ -1,0 +1,5 @@
+====
+Starting job 8824013 at Wed 22 Oct 01:30:13 BST 2025 for user dc-kyaw1.
+Running on nodes: b107
+====
+✅ LIKWID benchmark on DINE complete

@@ -1,0 +1,25 @@
+#!/bin/bash
+#SBATCH -A do022
+#SBATCH -p ciuk-dine2
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -t 00:30:00
+#SBATCH --exclusive
+#SBATCH -o /cosma/home/do022/dc-kyaw1/ciuk2025/results/likwid_dine2_%j.out
+#SBATCH -e /cosma/home/do022/dc-kyaw1/ciuk2025/results/likwid_dine2_%j.err
+
+export PATH=/cosma/apps/do022/dc-kyaw1/likwid/bin:$PATH
+
+cd /cosma/home/do022/dc-kyaw1/ciuk2025/results/
+
+echo "=== LIKWID Benchmark on DINE2 ===" > likwid_summary_dine2.txt
+likwid-topology >> likwid_summary_dine2.txt
+
+echo "Running memory-bandwidth tests..." >> likwid_summary_dine2.txt
+likwid-bench -t copy  -W S0:1GB -i 5 >> likwid_summary_dine2.txt
+likwid-bench -t triad -W S0:1GB -i 5 >> likwid_summary_dine2.txt
+
+echo "Running compute test..." >> likwid_summary_dine2.txt
+likwid-bench -t peakflops_avx -W S0:1GB -i 5 >> likwid_summary_dine2.txt
+
+echo "✅ LIKWID benchmark on DINE2 complete"
