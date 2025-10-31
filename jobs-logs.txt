@@ -1,0 +1,26 @@
+JobID           JobName  Partition    Account  AllocCPUS      State ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- -------- 
+8823970      likwid_di+  ciuk-dine      do022         32  COMPLETED      0:0 
+8823970.bat+      batch                 do022         32  COMPLETED      0:0 
+8823970.ext+     extern                 do022         32  COMPLETED      0:0 
+8823971      likwid_di+ ciuk-dine2      do022         64  COMPLETED      0:0 
+8823971.bat+      batch                 do022         64  COMPLETED      0:0 
+8823971.ext+     extern                 do022         64  COMPLETED      0:0 
+8824002      likwid_di+  ciuk-dine      do022         32  COMPLETED      0:0 
+8824002.bat+      batch                 do022         32  COMPLETED      0:0 
+8824002.ext+     extern                 do022         32  COMPLETED      0:0 
+8824003      likwid_di+ ciuk-dine2      do022         64  COMPLETED      0:0 
+8824003.bat+      batch                 do022         64  COMPLETED      0:0 
+8824003.ext+     extern                 do022         64  COMPLETED      0:0 
+8824013      likwid_di+  ciuk-dine      do022         32  COMPLETED      0:0 
+8824013.bat+      batch                 do022         32  COMPLETED      0:0 
+8824013.ext+     extern                 do022         32  COMPLETED      0:0 
+8824014      likwid_di+ ciuk-dine2      do022         64  COMPLETED      0:0 
+8824014.bat+      batch                 do022         64  COMPLETED      0:0 
+8824014.ext+     extern                 do022         64  COMPLETED      0:0 
+8825234      stream_di+  ciuk-dine      do022         32  COMPLETED      0:0 
+8825234.bat+      batch                 do022         32  COMPLETED      0:0 
+8825234.ext+     extern                 do022         32  COMPLETED      0:0 
+8825235      stream_di+ ciuk-dine2      do022         64  COMPLETED      0:0 
+8825235.bat+      batch                 do022         64  COMPLETED      0:0 
+8825235.ext+     extern                 do022         64  COMPLETED      0:0 

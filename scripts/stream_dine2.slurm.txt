@@ -1,0 +1,21 @@
+#!/bin/bash
+#SBATCH -A do022
+#SBATCH -p ciuk-dine2
+#SBATCH -N 1
+#SBATCH -n 1
+#SBATCH -t 00:30:00
+#SBATCH --exclusive
+#SBATCH -o /cosma/home/do022/dc-kyaw1/ciuk2025/results/stream_dine2_%j.out
+#SBATCH -e /cosma/home/do022/dc-kyaw1/ciuk2025/results/stream_dine2_%j.err
+
+cd /cosma/home/do022/dc-kyaw1/ciuk2025/stream_test
+export OMP_NUM_THREADS=64
+
+echo "=== STREAM Triad on DINE2 ===" > /cosma/home/do022/dc-kyaw1/ciuk2025/results/stream_summary_dine2.txt
+
+for N in 1000000 10000000 50000000 100000000
+do
+  echo "Running STREAM with N=$N" >> /cosma/home/do022/dc-kyaw1/ciuk2025/results/stream_summary_dine2.txt
+  cc -O3 -fopenmp -DSTREAM_ARRAY_SIZE=$N -DNTIMES=10 stream.c -o stream
+  ./stream >> /cosma/home/do022/dc-kyaw1/ciuk2025/results/stream_summary_dine2.txt
+done
